@@ -6,10 +6,7 @@ import { fileURLToPath, URL } from "node:url";
 export default defineConfig({
   plugins: [vue(), ],
   base: "/todoma-site/",
-  build: {
-    outDir: "docs",
-    emptyOutDir: true,
-  },
+  
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
