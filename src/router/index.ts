@@ -5,6 +5,7 @@ import RegisterView from "@/views/RegisterView.vue";
 import TasksView from "@/views/TasksView.vue";
 
 const router = createRouter({
+  // GitHub Pages 最穩：hash 模式，不怕刷新 404
   history: createWebHashHistory(),
   routes: [
     { path: "/", redirect: "/login" },
@@ -19,11 +20,15 @@ router.beforeEach((to) => {
   const publicPages = ["/login", "/register"];
 
   if (!isAuthed && !publicPages.includes(to.path)) {
-    return "/login";
+    return { path: "/login" };
   }
+
+  // 已登入還去 login/register → 導回 tasks
   if (isAuthed && publicPages.includes(to.path)) {
-    return "/tasks";
+    return { path: "/tasks" };
   }
+
+  return true;
 });
 
 export default router;
