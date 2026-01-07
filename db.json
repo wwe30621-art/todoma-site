@@ -1,0 +1,20 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "userId": 1,
+      "title": "First task",
+      "done": false,
+      "createdAt": "2026-01-04T00:00:00.000Z",
+      "updatedAt": "2026-01-04T00:00:00.000Z"
+    },
+    {
+      "id": "9dbb",
+      "userId": 0,
+      "title": "123",
+      "done": false,
+      "createdAt": "2026-01-04T06:09:24.513Z",
+      "updatedAt": "2026-01-04T06:09:24.513Z"
+    }
+  ]
+}
